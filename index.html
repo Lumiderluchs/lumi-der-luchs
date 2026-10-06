@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Lumi der Luchs geht auf Gefühlsreise | Kinderbücher, Kindergeschichten & Kinderlieder</title>
+  <title>Lumi der Luchs geht auf Gefühlsreise | Kinderbücher von Bernadett Palfy & Barbara Aigner</title>
 
-  <meta name="description" content="Lumi der Luchs geht auf Gefühlsreise: Kinderbücher, Kindergeschichten, Vorlesegeschichten und Kinderlieder über Gefühle, Freundschaft, Mut und Abenteuer. Entdecke Lumis Adventsgeschichten und Waldschule.">
+  <meta name="description" content="Lumi der Luchs geht auf Gefühlsreise: Kinderbücher von Prof. Bernadett Palfy und Barbara Aigner über Gefühle, Freundschaft, Schulanfang und Advent. Entdecke Neid in Croissania, die Waldschule Tausendblatt und 24 Adventsgeschichten im Winterwald.">
 
   <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://lumiderluchs.github.io/lumi-der-luchs/">
 
   <style>
     * {
@@ -23,738 +25,573 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: #fffaf0;
-      color: #3d4038;
+      color: #294238;
       line-height: 1.7;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-    }
-
-    nav {
-      background: #355b46;
-      padding: 14px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      color: white;
-      font-size: 1.25rem;
-      font-weight: bold;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: white;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      background: linear-gradient(180deg, #dcebd7, #f7f0d9);
+    header {
+      background: linear-gradient(135deg, #dff2e5, #e7f4fb);
       text-align: center;
       padding: 70px 20px 60px;
     }
 
-    .hero h1 {
-      color: #294c39;
-      font-size: clamp(2.3rem, 7vw, 4.5rem);
-      margin: 0 0 8px;
-    }
-
-    .hero .series-title {
-      color: #6b4b34;
-      font-size: clamp(1.55rem, 4vw, 2.4rem);
-      margin: 0 auto 18px;
-      font-weight: bold;
-    }
-
-    .hero h2 {
-      color: #6b4b34;
-      font-size: clamp(1.2rem, 3vw, 1.7rem);
-      margin: 0 auto 20px;
-      max-width: 850px;
-    }
-
-    .hero p {
-      max-width: 800px;
-      margin: 0 auto 28px;
-      font-size: 1.1rem;
-    }
-
     .badge {
       display: inline-block;
-      background: white;
+      background: #ffffff;
+      color: #35624b;
+      padding: 8px 16px;
       border-radius: 30px;
-      padding: 9px 18px;
-      margin-bottom: 25px;
-      color: #355b46;
       font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      color: #27533e;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #93623b;
+      font-weight: bold;
+      margin: 12px 0;
+    }
+
+    .authors {
+      font-size: 1.05rem;
+      font-weight: bold;
+      margin-top: 22px;
+    }
+
+    nav {
+      background: #315b46;
+      text-align: center;
+      padding: 14px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 12px;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 65px 22px;
+    }
+
+    h2 {
+      color: #315b46;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.2;
+    }
+
+    h3 {
+      color: #7d5033;
+      font-size: 1.5rem;
+    }
+
+    .intro {
+      font-size: 1.15rem;
+      max-width: 800px;
+      margin: 20px auto 0;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .featured {
+      background: #f4ead4;
+      border-radius: 32px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+
+    .book-grid {
+      display: grid;
+      grid-template-columns: minmax(240px, 360px) 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .book-grid img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.16);
+    }
+
+    .angel {
+      margin-top: 22px;
+      max-width: 210px;
     }
 
     .button {
       display: inline-block;
-      background: #355b46;
+      background: #b7653c;
       color: white;
-      padding: 13px 22px;
+      padding: 14px 23px;
       border-radius: 30px;
+      text-decoration: none;
       font-weight: bold;
-      margin: 6px;
+      margin: 10px 8px 10px 0;
     }
 
     .button:hover {
-      background: #294735;
+      background: #954c2d;
     }
 
-    .button-light {
-      background: #a5573e;
+    .sample {
+      margin-top: 28px;
+      background: #ffffff;
+      border-left: 5px solid #d6a34d;
+      border-radius: 14px;
+      padding: 20px 22px;
     }
 
-    .button-light:hover {
-      background: #894631;
-    }
-
-    section {
-      padding: 70px 0;
-    }
-
-    section h2 {
-      color: #355b46;
-      font-size: clamp(1.8rem, 4vw, 2.7rem);
-      line-height: 1.2;
-      margin-top: 0;
-    }
-
-    section h3 {
-      color: #6b4b34;
-    }
-
-    .intro {
-      max-width: 820px;
-      margin: 0 auto 40px;
-      text-align: center;
-    }
-
-    .advent {
-      background: #f7efe0;
-    }
-
-    .advent-grid {
-      display: grid;
-      grid-template-columns: minmax(260px, 420px) 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .book-cover {
-      border-radius: 18px;
-      box-shadow: 0 14px 35px rgba(50, 50, 30, 0.18);
-      margin: auto;
-    }
-
-    .season-label {
-      color: #9a4a36;
+    details summary {
+      cursor: pointer;
       font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      color: #315b46;
+      font-size: 1.1rem;
     }
 
-    .feature-list {
-      padding-left: 20px;
-    }
-
-    .feature-list li {
-      margin-bottom: 10px;
-    }
-
-    .angel {
-      background: #eaf3e5;
-    }
-
-    .angel-grid {
-      display: grid;
-      grid-template-columns: 1fr minmax(240px, 380px);
-      gap: 50px;
-      align-items: center;
-    }
-
-    .angel img {
-      border-radius: 24px;
-      box-shadow: 0 12px 30px rgba(40, 70, 45, 0.15);
+    .verse {
+      background: #e9f3e8;
+      padding: 18px 20px;
+      border-radius: 14px;
+      margin-top: 20px;
+      font-style: italic;
     }
 
     .books {
-      background: #fffaf0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
     }
 
-    .book-card {
-      display: grid;
-      grid-template-columns: minmax(230px, 340px) 1fr;
-      gap: 45px;
-      align-items: center;
-      margin: 55px 0;
+    .card {
       background: white;
+      border-radius: 25px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 350px;
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 15px;
+    }
+
+    .author-box {
+      background: #e7f4fb;
+      border-radius: 25px;
+      text-align: center;
       padding: 35px;
-      border-radius: 24px;
-      box-shadow: 0 8px 25px rgba(50, 50, 30, 0.08);
-    }
-
-    .book-card:nth-child(even) .book-image {
-      order: 2;
-    }
-
-    .friends {
-      margin-top: 25px;
-    }
-
-    .friends img {
-      border-radius: 18px;
-      margin-top: 15px;
-    }
-
-    .friends-two {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    .merkvers {
-      background: #f0ead7;
-      border-left: 5px solid #7d9b65;
-      padding: 16px 20px;
-      border-radius: 10px;
-      margin: 22px 0;
     }
 
     .songs {
-      background: #dfeede;
+      background: #e9f3e8;
+      border-radius: 25px;
       text-align: center;
-    }
-
-    .song-box {
-      max-width: 800px;
-      margin: auto;
-      background: rgba(255,255,255,0.7);
-      border-radius: 24px;
-      padding: 35px;
-    }
-
-    .parents {
-      background: #f7efe0;
-    }
-
-    .parent-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 35px;
-    }
-
-    .parent-box {
-      background: white;
-      padding: 25px;
-      border-radius: 18px;
-      text-align: center;
-    }
-
-    .discover {
-      background: #fffaf0;
-      text-align: center;
-    }
-
-    .discover-box {
-      max-width: 850px;
-      margin: auto;
-      background: white;
-      padding: 35px;
-      border-radius: 24px;
-      box-shadow: 0 8px 25px rgba(50, 50, 30, 0.08);
     }
 
     footer {
-      background: #355b46;
+      background: #315b46;
       color: white;
       text-align: center;
       padding: 35px 20px;
     }
 
-    footer p {
-      margin: 5px 0;
-    }
-
     @media (max-width: 760px) {
-      .nav-inner {
-        justify-content: center;
-        text-align: center;
-      }
-
-      .nav-links {
-        justify-content: center;
-      }
-
-      .advent-grid,
-      .angel-grid,
-      .book-card {
+      .book-grid,
+      .books {
         grid-template-columns: 1fr;
       }
 
-      .book-card:nth-child(even) .book-image {
-        order: 0;
+      nav a {
+        display: inline-block;
+        margin: 5px 7px;
       }
 
-      .friends-two,
-      .parent-grid {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 50px 0;
+      .featured {
+        padding: 22px;
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Lumi der Luchs",
+    "url": "https://lumiderluchs.github.io/lumi-der-luchs/",
+    "description": "Lumi der Luchs geht auf Gefühlsreise – Kinderbücher von Prof. Bernadett Palfy und Barbara Aigner."
+  }
+  </script>
 </head>
 
 <body>
 
-  <nav>
-    <div class="container nav-inner">
-      <a class="logo" href="#start">🐾 Lumi der Luchs</a>
+<header>
+  <div class="badge">Kinderbücher · Geschichten · Gefühle · Abenteuer</div>
 
-      <div class="nav-links">
-        <a href="#advent">Advent</a>
-        <a href="#buecher">Kinderbücher</a>
-        <a href="#lieder">Kinderlieder</a>
-        <a href="#eltern">Für Eltern</a>
-      </div>
-    </div>
-  </nav>
+  <h1>Lumi der Luchs 🐾</h1>
 
-  <header class="hero" id="start">
-    <div class="container">
+  <div class="subtitle">geht auf Gefühlsreise</div>
 
-      <div class="badge">
-        Kinderbücher · Kindergeschichten · Kinderlieder
-      </div>
+  <p class="intro">
+    Geschichten über Gefühle, Freundschaft, Mut, Schule,
+    Advent und die kleinen großen Abenteuer des Kinderalltags.
+  </p>
 
-      <h1>Lumi der Luchs 🐾</h1>
+  <p class="authors">
+    Autorinnen: Prof. Bernadett Palfy &amp; Barbara Aigner
+  </p>
+</header>
 
-      <div class="series-title">
-        geht auf Gefühlsreise
-      </div>
+<nav>
+  <a href="#advent">Advent</a>
+  <a href="#buecher">Bücher</a>
+  <a href="#lieder">Kinderlieder</a>
+  <a href="#autorinnen">Autorinnen</a>
+</nav>
 
-      <h2>
-        Geschichten über Gefühle, Freundschaft, Mut und kleine große Abenteuer
-      </h2>
+<main>
 
-      <p>
-        Willkommen in der Welt von <strong>Lumi der Luchs</strong>.
-        Auf seinen Gefühlsreisen erlebt Lumi besondere Abenteuer,
-        begegnet großen und kleinen Gefühlen, findet Freunde und entdeckt,
-        dass jeder auf seine eigene Weise besonders ist.
-      </p>
+  <section id="advent">
+    <div class="featured">
 
-      <p>
-        Entdecke liebevolle Kinderbücher, Kindergeschichten,
-        Vorlesegeschichten und Kinderlieder zum gemeinsamen Lesen,
-        Zuhören, Nachdenken und Mitsingen.
-      </p>
+      <div class="book-grid">
 
-      <a class="button" href="#buecher">
-        📚 Lumis Gefühlsreisen entdecken
-      </a>
+        <div class="center">
+          <img src="lumi-der-luchs-advent-cover.png"
+               alt="Lumi der Luchs Adventskalender – 24 Adventsgeschichten im Winterwald">
 
-      <a class="button button-light" href="#advent">
-        🎄 Advent mit Lumi
-      </a>
-
-    </div>
-  </header>
-
-  <section class="advent" id="advent">
-    <div class="container advent-grid">
-
-      <div>
-        <img
-          class="book-cover"
-          src="lumi-der-luchs-advent-cover.png"
-          alt="Lumi der Luchs – 24 Adventsgeschichten für Kinder im Winterwald">
-      </div>
-
-      <div>
-        <div class="season-label">
-          🎄 Adventsgeschichten für Kinder
-        </div>
-
-        <h2>
-          Lumi der Luchs – 24 Adventsgeschichten im Winterwald
-        </h2>
-
-        <p>
-          24 liebevolle Adventsgeschichten begleiten Kinder und Familien
-          durch die besondere Zeit vor Weihnachten.
-        </p>
-
-        <p>
-          Am ersten Tag öffnet Lumi sein Türchen. Danach erlebt Lumi
-          jeden Tag eine neue kleine Wintergeschichte. Es geht um
-          Vorfreude, Geduld, gemeinsames Basteln und Backen, alte Bräuche,
-          Kerzenschein, vertraute Düfte und vor allem um die kleinen
-          Momente, die Weihnachten besonders machen.
-        </p>
-
-        <ul class="feature-list">
-          <li>🎄 24 Adventsgeschichten für Kinder und Familien</li>
-          <li>📖 Zum Vorlesen und gemeinsamen Entdecken</li>
-          <li>🐾 Winterliche Abenteuer mit Lumi der Luchs</li>
-          <li>💛 Familie, Freundschaft und Zusammenhalt</li>
-          <li>✨ Mit einem Merkvers zu jeder Geschichte</li>
-          <li>👼 Mit Lumis kleinem Schutzengelchen</li>
-        </ul>
-
-        <div class="merkvers">
-          <strong>Lumis Merkverse:</strong><br>
-          Kleine Gedanken zum Erinnern, Nachdenken und gemeinsamen
-          Weiterreden – kindgerecht und passend zur jeweiligen Geschichte.
-        </div>
-
-        <a class="button" href="#engelchen">
-          👼 Das Schutzengelchen kennenlernen
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="angel" id="engelchen">
-    <div class="container angel-grid">
-
-      <div>
-        <h2>👼 Lumis kleines Schutzengelchen</h2>
-
-        <p>
-          Auch Lumis kleines Schutzengelchen begleitet die
-          Adventsgeschichten. Nach den Geschichten erinnert es
-          auf liebevolle Weise an besondere Momente und kleine Dinge
-          aus Lumis Winterwelt.
-        </p>
-
-        <p>
-          Manchmal neugierig, manchmal nachdenklich und manchmal
-          einfach zum Schmunzeln – ein kleiner Begleiter durch
-          Lumis Adventszeit.
-        </p>
-      </div>
-
-      <div>
-        <img
-          src="lumi-der-luchs-schutzengelchen-14.png"
-          alt="Lumi der Luchs als kleines Schutzengelchen">
-      </div>
-
-    </div>
-  </section>
-
-  <section class="books" id="buecher">
-    <div class="container">
-
-      <div class="intro">
-
-        <h2>📚 Lumi der Luchs geht auf Gefühlsreise</h2>
-
-        <p>
-          In Lumis Kinderbüchern werden Gefühle zu besonderen Reisen.
-          Lumi begegnet neuen Herausforderungen, entdeckt Freundschaft
-          und lernt, mit großen und kleinen Gefühlen umzugehen.
-        </p>
-
-        <p>
-          Die Geschichten laden Kinder zum Vorlesen, Entdecken,
-          Nachdenken und gemeinsamen Sprechen ein. Wer Kinderbücher
-          kaufen oder besondere Geschichten über Gefühle,
-          Freundschaft und Mut entdecken möchte, kann hier
-          Lumis Abenteuer kennenlernen.
-        </p>
-
-      </div>
-
-      <article class="book-card">
-
-        <div class="book-image">
-          <img
-            class="book-cover"
-            src="lumi-der-luchs-neid-in-croissania-cover.png"
-            alt="Lumi der Luchs geht auf Gefühlsreise – Neid in Croissania">
+          <img class="angel"
+               src="lumi-der-luchs-schutzengelchen-14.png"
+               alt="Kleiner Schutzengel aus Lumi der Luchs">
         </div>
 
         <div>
+          <p><strong>Band 3 der Reihe · Kinderbuch-Adventskalender</strong></p>
 
-          <h3>Kinderbuch über Gefühle</h3>
-
-          <h2>
-            Lumi der Luchs geht auf Gefühlsreise – Neid in Croissania
-          </h2>
+          <h2>24 Adventsgeschichten im Winterwald 🎄</h2>
 
           <p>
-            Lumi begegnet dem Gefühl Neid und entdeckt,
-            dass auch schwierige Gefühle etwas erzählen können.
+            Ein Adventskalender zum Vorlesen:
+            24 winterliche Geschichten begleiten Kinder und Familien
+            durch die besondere Zeit bis Weihnachten.
           </p>
 
           <p>
-            Eine Geschichte über Unterschiede, Freundschaft,
-            Teilen und darüber, dass jeder auf seine ganz eigene
-            Weise besonders ist.
+            Lumi der Luchs entdeckt kleine Traditionen, erlebt
+            winterliche Augenblicke und macht jeden Adventstag
+            zu einer neuen kleinen Überraschung.
           </p>
 
-          <div class="merkvers">
-            <strong>🐾 Mit Merkvers:</strong><br>
-            Ein kleiner Gedanke begleitet Kinder nach der Geschichte
-            weiter und lädt zum gemeinsamen Erinnern und Sprechen ein.
+          <p>
+            Für Eltern, die im Advent nicht nur jeden Tag etwas geben,
+            sondern gemeinsam mit ihrem Kind etwas erleben möchten:
+            lesen, kuscheln, staunen und Vorfreude teilen.
+          </p>
+
+          <p>
+            <strong>
+              Nicht einfach jeden Tag etwas bekommen –
+              sondern jeden Tag etwas gemeinsam erleben.
+            </strong>
+          </p>
+
+          <a class="button"
+             href="https://www.amazon.de/dp/B0HLZ4XFXT"
+             target="_blank"
+             rel="noopener noreferrer">
+             🛒 Adventsbuch bei Amazon entdecken
+          </a>
+
+          <div class="sample">
+            <details>
+              <summary>📖 Kleine Leseprobe öffnen</summary>
+
+              <h3>4. Dezember – Der geheimnisvolle Barbarazweig</h3>
+
+              <p>
+                „Das ist ein Barbarazweig“, erklärte Mama.
+                „Traditionell wird am 4. Dezember ein Zweig von einem
+                Obstbaum abgeschnitten und ins Warme gestellt.
+                Wenn alles gutgeht, beginnt er bis Weihnachten zu blühen.“
+              </p>
+
+              <p>
+                Lumi staunte. „Blüten? Mitten im Winter?“
+              </p>
+
+              <p>
+                „Genau“, bestätigte Mama.
+              </p>
+
+              <p>
+                Lumi versuchte sich vorzustellen, wie an dem kahlen
+                Zweig plötzlich zarte Blüten wachsen würden.
+                Das musste mitten im Winter besonders schön aussehen.
+              </p>
+
+              <p>
+                Vorsichtig stupste er eine der Knospen mit der
+                Nasenspitze an, als könnte er sie damit ein wenig
+                ermuntern.
+              </p>
+
+              <p>
+                „Du darfst ruhig schon anfangen“, murmelte er ihr zu …
+              </p>
+            </details>
           </div>
 
-          <div class="friends">
-
-            <h3>Lumis Freunde in Croissania</h3>
-
-            <img
-              src="lumi-der-luchs-neid-in-croissania-freunde.png"
-              alt="Lumi der Luchs und seine Freunde in Croissania">
-
-          </div>
-
-        </div>
-      </article>
-
-      <article class="book-card">
-
-        <div class="book-image">
-
-          <img
-            class="book-cover"
-            src="lumi-der-luchs-waldschule-cover.png"
-            alt="Lumi der Luchs geht in die Waldschule Tausendblatt">
-
-        </div>
-
-        <div>
-
-          <h3>Kinderbuch über Schulanfang, Mut und Freundschaft</h3>
-
-          <h2>
-            Lumi der Luchs geht in die Waldschule Tausendblatt
-          </h2>
-
-          <p>
-            Für Lumi beginnt ein ganz besonderer Tag:
-            der erste Schultag in der Waldschule Tausendblatt.
-          </p>
-
-          <p>
-            Zwischen Aufregung, neuen Freunden und ersten
-            Herausforderungen entdeckt Lumi, dass Lernen nicht
-            für jeden gleich aussieht – und dass Fragen,
-            Fehler und ein neuer Versuch dazugehören.
-          </p>
-
-          <p>
-            Eine Geschichte für Kinder über Schulanfang,
-            Freundschaft, Mut, Lernen und Selbstvertrauen.
-          </p>
-
-          <div class="merkvers">
-            <strong>🐾 Mit Merkvers:</strong><br>
-            Ein kleiner Gedanke begleitet Kinder auch nach der Geschichte
-            weiter und lädt zum gemeinsamen Erinnern und Sprechen ein.
-          </div>
-
-          <div class="friends">
-
-            <h3>Lumi und seine Freunde in der Waldschule</h3>
-
-            <div class="friends-two">
-
-              <img
-                src="lumi-der-luchs-waldschule-freunde-01.png"
-                alt="Lumi der Luchs und seine Freunde in der Waldschule">
-
-              <img
-                src="lumi-der-luchs-waldschule-freunde-02.png"
-                alt="Weitere Freunde von Lumi der Luchs in der Waldschule">
-
-            </div>
-
+          <div class="verse">
+            <strong>Ein kleiner Adventsvers:</strong><br>
+            „Ein kahler Zweig, ganz still und klein …“
           </div>
 
         </div>
-      </article>
-
+      </div>
     </div>
   </section>
 
-  <section class="songs" id="lieder">
 
-    <div class="container">
+  <section id="buecher">
 
-      <div class="song-box">
+    <div class="center">
+      <h2>Entdecke Lumis Gefühlsreisen</h2>
 
-        <h2>🎵 Kinderlieder – sing mit Lumi der Luchs!</h2>
-
-        <p>
-          Zu Lumis Gefühlsreisen gehören nicht nur Kinderbücher
-          und Geschichten. Auch Lumis Kinderlieder begleiten
-          Kinder durch Gefühle, Freundschaft und kleine große Abenteuer.
-        </p>
-
-        <p>
-          Hier entsteht ein eigener Platz für Kinderlieder zum
-          Zuhören, Mitsingen und gemeinsamen Entdecken.
-        </p>
-
-        <p>
-          Schon bald kannst du hier Lumis Lieder direkt anhören.
-        </p>
-
-        <span class="button">
-          🎵 Lumis Kinderlieder – bald hier
-        </span>
-
-      </div>
-
+      <p>
+        Kinderbücher zum Vorlesen und gemeinsamen Entdecken –
+        mit Humor, Gefühlen, Freundschaft und kleinen Momenten,
+        die Kinder aus ihrer eigenen Welt kennen.
+      </p>
     </div>
-  </section>
 
-  <section class="parents" id="eltern">
+    <div class="books">
 
-    <div class="container">
+      <article class="card">
 
-      <div class="intro">
+        <img src="lumi-der-luchs-neid-in-croissania-cover.png"
+             alt="Lumi der Luchs – Neid in Croissania Kinderbuch">
 
-        <h2>💛 Für Eltern & Familien</h2>
+        <p><strong>Band 1</strong></p>
 
-        <p>
-          „Lumi der Luchs geht auf Gefühlsreise“ möchte Kinder
-          unterhalten und gleichzeitig kleine Türen für Gespräche
-          über Gefühle, Freundschaft, Mut und Alltagserlebnisse öffnen.
-        </p>
-
-      </div>
-
-      <div class="parent-grid">
-
-        <div class="parent-box">
-
-          <h3>💚 Gefühle verstehen</h3>
-
-          <p>
-            Lumi begegnet Gefühlen kindgerecht und ohne sie
-            einfach in „gut“ oder „schlecht“ einzuteilen.
-          </p>
-
-        </div>
-
-        <div class="parent-box">
-
-          <h3>🐾 Gemeinsam vorlesen</h3>
-
-          <p>
-            Geschichten und Merkverse geben Anlässe zum
-            Nachfragen, Erzählen und gemeinsamen Erinnern.
-          </p>
-
-        </div>
-
-        <div class="parent-box">
-
-          <h3>🌲 Abenteuer entdecken</h3>
-
-          <p>
-            Freundschaft, Mut, Lernen und kleine Alltagsabenteuer
-            begleiten Lumi der Luchs auf seinen Gefühlsreisen.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <section class="discover">
-
-    <div class="container">
-
-      <div class="discover-box">
-
-        <h2>
-          🐾 Kindergeschichten, Märchen, Kinderlieder & Abenteuer entdecken
-        </h2>
+        <h3>Neid in Croissania</h3>
 
         <p>
-          Lumis Welt ist ein Ort für Kinderbücher, fantasievolle
-          Kindergeschichten, Vorlesegeschichten, Kinderlieder
-          und kleine Abenteuer. Gefühle, Freundschaft, Schulanfang,
-          Lernen und die besondere Adventszeit sind Themen,
-          die Lumi der Luchs auf seinen Reisen begleiten.
+          Was passiert, wenn man andere anschaut und plötzlich
+          das Gefühl bekommt, selbst anders zu sein?
         </p>
 
         <p>
-          Entdecke „Lumi der Luchs geht auf Gefühlsreise“,
-          Lumis Geschichten für Kinder, seine Merkverse
-          und bald auch seine Kinderlieder zum Mitsingen.
+          Eine Gefühlsreise für Kinder über Unterschiede,
+          Vergleichen, Freundschaft und die Frage,
+          was jeden Einzelnen besonders macht.
         </p>
 
-        <a class="button" href="#buecher">
-          📚 Lumis Kinderbücher entdecken
+        <div class="sample">
+          <details>
+            <summary>📖 Kleine Leseprobe öffnen</summary>
+
+            <p>
+              Eines Abends saß Lumi neben seiner Mutter.
+              Die Sonne ging langsam unter und färbte
+              den Himmel orange und gold.
+            </p>
+
+            <p>
+              Lumi schaute auf seine Pfoten.
+            </p>
+
+            <p>
+              Dann sagte er leise:
+              „Mama … ich glaube, ich bin anders.“
+            </p>
+
+            <p>
+              Seine Mutter sah ihn an mit einem ruhigen,
+              warmen Blick.
+            </p>
+
+            <p>
+              „Ja“, sagte sie sanft.
+              „Das bist du.“
+            </p>
+
+            <p>
+              Lumi schaute überrascht auf.
+            </p>
+
+            <p><strong>„Ist das … schlecht?“</strong></p>
+          </details>
+        </div>
+
+        <div class="verse">
+          <strong>Ein kleiner Ausschnitt aus Lumis Vers:</strong><br>
+          „Schnell und langsam, groß und klein,<br>
+          alle dürfen anders sein …“
+        </div>
+
+        <a class="button"
+           href="https://www.amazon.de/dp/B0H6M79V4Y"
+           target="_blank"
+           rel="noopener noreferrer">
+           🛒 Band 1 bei Amazon entdecken
         </a>
 
-        <a class="button button-light" href="#lieder">
-          🎵 Zu Lumis Kinderliedern
+      </article>
+
+
+      <article class="card">
+
+        <img src="lumi-der-luchs-waldschule-cover.png"
+             alt="Lumi der Luchs kommt in die Waldschule Tausendblatt Kinderbuch">
+
+        <p><strong>Band 2</strong></p>
+
+        <h3>Lumi kommt in die Waldschule Tausendblatt</h3>
+
+        <p>
+          Schule bedeutet Neues entdecken, neue Freunde kennenlernen,
+          ausprobieren, lachen – und manchmal auch ein kleines
+          Kribbeln im Bauch.
+        </p>
+
+        <p>
+          Eine humorvolle Geschichte rund um Schule,
+          Freundschaft und die vielen unterschiedlichen Arten,
+          wie Kinder lernen und die Welt entdecken.
+        </p>
+
+        <div class="sample">
+          <details>
+            <summary>📖 Kleine Leseprobe öffnen</summary>
+
+            <p>
+              Vor lauter Freude auf seine Jause machte der
+              Grashüpfer einen großen Freudensprung.
+            </p>
+
+            <p><strong>Hüüüpf!</strong></p>
+
+            <p>
+              Lumi beobachtete ihn und sagte:
+              „Flip, dein Rucksack hüpft ja genauso fröhlich wie du!“
+            </p>
+
+            <p>
+              Flip drehte sich um.
+            </p>
+
+            <p>
+              „Stimmt! Der macht einfach alles nach, was ich mache!“
+            </p>
+
+            <p>
+              Moritz, der Maulwurf, schaute aufmerksam
+              auf Flips Rucksack.
+            </p>
+
+            <p>„Flip …“</p>
+
+            <p>„Ich glaube, deine Jause möchte aussteigen.“</p>
+
+            <p>
+              Flip schaute erschrocken nach hinten.
+            </p>
+
+            <p>„Was?“</p>
+
+            <p>
+              Vor lauter Neugier machte er noch einen kleinen Hüpfer.
+            </p>
+
+            <p><strong>Hüüüpf!</strong></p>
+
+            <p><strong>Plopp!</strong></p>
+
+            <p><strong>Der Reißverschluss sprang auf …</strong></p>
+          </details>
+        </div>
+
+        <div class="verse">
+          <strong>Ein kleiner Ausschnitt aus Lumis Vers:</strong><br>
+          „Jeder lernt auf seine Art,<br>
+          mal ganz schnell, mal still und zart …“
+        </div>
+
+        <a class="button"
+           href="https://www.amazon.de/dp/B0H8M6WQ5L"
+           target="_blank"
+           rel="noopener noreferrer">
+           🛒 Band 2 bei Amazon entdecken
         </a>
 
-      </div>
+      </article>
 
     </div>
   </section>
 
-  <footer>
+
+  <section id="lieder" class="songs">
+    <h2>🎵 Lumis Kinderlieder</h2>
 
     <p>
-      <strong>🐾 Lumi der Luchs geht auf Gefühlsreise</strong>
+      Zu Lumis Welt gehören nicht nur Geschichten,
+      sondern auch Kinderlieder.
     </p>
 
     <p>
-      Kinderbücher · Kindergeschichten · Kinderlieder ·
-      Gefühle · Freundschaft · Advent · Abenteuer
+      <strong>Bald kannst du Lumis Lieder auch hier anhören.</strong>
     </p>
+  </section>
 
-  </footer>
+
+  <section id="autorinnen">
+
+    <div class="author-box">
+
+      <h2>Über die Autorinnen</h2>
+
+      <h3>Prof. Bernadett Palfy &amp; Barbara Aigner</h3>
+
+      <p>
+        Prof. Bernadett Palfy und Barbara Aigner sind die
+        Autorinnen der Kinderbuchreihe
+        <strong>„Lumi der Luchs geht auf Gefühlsreise“</strong>.
+      </p>
+
+      <p>
+        In Lumis Geschichten begegnen Kindern Gefühle,
+        Freundschaft, Schule, kleine Herausforderungen,
+        Humor und besondere Momente des Alltags.
+      </p>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+  <strong>Lumi der Luchs geht auf Gefühlsreise</strong><br>
+  Kinderbuchreihe von Prof. Bernadett Palfy &amp; Barbara Aigner
+</footer>
 
 </body>
 </html>
